@@ -8,17 +8,12 @@ Example is using chip 74HC595 8Bit Serial Shift Register
 #How to Use
 First, add this library to your Arduino IDE
 
-in Code :
+
 include <ExtDigitalOutput.h>
 
 ExtDigitalOutput output(8,9,10,1); // -> (DS pin, STCP pin, SHCP pin, Number chip extend)
 
-void setup()
-{
-output.begin();
-}
+output.begin() to initialize pin used to be Output Mode
 
-void loop()
-{
-output.write(0,1); //output.write(74hc595outPin , Logic)
-}
+output.write(0,1) to write logic HIGH to pin Q0 in chip 74hc595
+
